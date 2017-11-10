@@ -108,9 +108,8 @@ winning_combo = won?(board)
 end
 
 def play(board)
-  if !over?(board)
+  while !over?(board)
     turn(board)
-    play(board)
   elsif draw?(board)
     puts "Cat's Game!"
   elsif won?(board)
